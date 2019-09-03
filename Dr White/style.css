@@ -1,0 +1,261 @@
+:root {
+    --primary-color:#192b43;
+    --link-color: #fff;
+    --heading-branding-color:#61b3e7;
+    --background-color: #192b43;
+    --hover-color:#5fb4ec;
+
+
+    --nav-font-size:calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    --h1-font-size: calc(26px + (38 - 26) * ((100vw - 300px) / (1600 - 300)));
+    --h2-font-size: calc(16px + (28 - 16) * ((100vw - 300px) / (1600 - 300)))
+  }
+    
+  
+h1, h2 {
+    text-transform: uppercase;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+
+  
+  * {
+    padding:0;
+    margin:0;
+    box-sizing: box-border;
+    font-family: 'Arimo', sans-serif;
+
+  }
+  
+  header {
+    background-color: black;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 40px 40px;
+    overflow:hidden;
+  }
+  
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: var(--nav-font-size);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .cta span {
+    color: var(--heading-branding-color);   
+  }
+  
+  a {
+    color:white !important;
+  }
+  a:hover {
+    text-decoration: none !important;
+  }
+  
+  
+  .header {
+    background-image:url('https://i.ibb.co/N7MpYGB/install-door.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+  
+  .headerWrapper h1 {
+    font-size: var(--h1-font-size);
+    line-height: 1.2em;
+    padding-bottom: 20px;
+  }
+  
+  .overlay:before {
+    position: absolute;
+    content:" ";
+    width:100%;
+    height: 100vh;
+    display: block;
+    z-index:0;
+    background-color: rgba(9, 18, 56, 0.71);
+  }
+  
+  @media only screen and (max-width: 425px) {
+    .overlay:before{
+      height: 120vh;
+    }
+    .header {
+      height: 120vh;
+    }
+  }
+  
+  .desc-head{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .desc-head h1 span {
+    color: var(--hover-color);
+  }
+  
+  
+  .line {
+    margin: 10px 0;
+    width: 100px;
+    height: 10px;
+    background-color: var(--heading-branding-color);
+    display: block;
+  }
+  
+  .description1 {
+    padding: 60px 60px;
+    display:flex;
+    align-items: center;
+    background-color: var(--background-color);
+  }
+  .title-desc1 span {
+    color: var(--heading-branding-color);  
+  }
+
+  .description1 h1, .description1 p {
+      color: var(--link-color);
+  }
+
+ 
+  
+.featured-post {
+    padding: 60px 60px;
+}
+
+.featured-post img {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.featured-post h2 {
+    color: var(--heading-branding-color);
+}
+
+
+.testimonial {
+    padding: 60px 60px;
+    background-color:var(--background-color);
+}
+
+.testimonial h1, .testimonial p, .testimonial h5, .open-qoute  {
+    color: var(--link-color);
+}
+
+.testimonial p::before {
+    position: absolute;
+    content: open-quote;
+    line-height: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 100px;
+}
+
+
+.call-action {
+    padding: 60px 60px;
+}
+
+.call-action .row {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.call-action img {
+  width: 100%;
+}
+
+button {
+    height: 6vh;
+    width: 10vw;
+    border: none;
+    background-color: var(--heading-branding-color);
+    color: var(--link-color);
+}
+
+button:hover {
+    background-color: var(--hover-color);
+    -webkit-box-shadow: 0px 0px 38px -2px rgba(97,179,231,1);
+    -moz-box-shadow: 0px 0px 38px -2px rgba(97,179,231,1);
+     box-shadow: 0px 0px 38px -2px rgba(97,179,231,1);
+}
+
+
+@media only screen and (max-width: 1025px) {
+    button {
+      height: 6vh;
+      width: 20vw;
+    }
+}
+
+
+footer {
+    background-color: var(--background-color);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--link-color);
+
+}
+
+
+form {
+  display: block;
+  background-color: var(--hover-color);
+  border-radius: 2px;
+  width: 100%;
+  height: 50vh;
+  padding: 20px 20px;
+  font-size: 14px;
+}
+
+input {
+  padding: 10px 0;
+  display: block;
+  width: 100%;
+  border:none;
+}
+
+
+#mc_embed_signup .button {
+  background-color: var(--background-color) !important;
+  width: 100%;
+  margin-top: 45px;
+  color:var(--link-color);
+}
+
+#mc_embed_signup .button:hover {
+  background-color: var(--hover-color) !important;
+  border: 1px var(--background-color) solid;
+  -webkit-box-shadow: 0px 0px 38px -2px rgb(59, 112, 145);
+  -moz-box-shadow: 0px 0px 38px -2px rgb(59, 112, 145);
+  box-shadow: 0px 0px 38px -2px rgb(59, 112, 145);
+  color: var(--background-color);
+
+}
+
+form p {
+  opacity: .5;
+  font-size:10px;
+  margin-top: 10px;
+}
+
+.indicates-required {
+  text-align: right;
+}
